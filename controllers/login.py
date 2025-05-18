@@ -52,17 +52,3 @@ def login():
         else:
             flash('Usuário ou senha incorretos.', 'danger')
             return redirect(url_for('login.login'))
-
-# Rota protegida (exemplo de dashboard)
-@bp_usuarios.route('/dashboard')
-@login_required
-def dashboard():
-    return render_template('dashboard.html')  # Crie esse arquivo
-
-# Rota de logout (corrigida com identação e decorador certo)
-@bp_usuarios.route('/logout')
-@login_required
-def logout():
-    logout_user()
-    flash('Logout realizado com sucesso!', 'info')
-    return redirect(url_for('login.login'))
