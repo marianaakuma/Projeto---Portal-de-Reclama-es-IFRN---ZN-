@@ -9,6 +9,26 @@ body {
     height: 2px;    
 }
 
+
+.decoracao1 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 220px;
+    height: auto; 
+}
+
+.decoracao2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: auto; 
+}
+
+
+
+
 .logo-container {
     margin-top: 230px; /* Define o deslocamento para baixo */
     margin-left: 100px;
@@ -83,4 +103,3 @@ body {
     font-size: 14px;
     transition: color 0.3s ease;
 }
-
