@@ -2,30 +2,39 @@
 <html lang="pt-BR">
 <head>
     <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="nav-wrapper">
                 <div class="logo-container">
+               <img src="https://i.ibb.co/pvV7jz4K/2-removebg-preview.png"></a>
                 </div>
             </div>
         </div>
+        <div class="logo-text">
+            <p>PROJETO DE PROJETO DE DESENVOLVIMENTO DE SISTEMAS PARA INTERNET</p>
+            <p>INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA - RIO GRANDE DO NORTE - CAMPUS NATAL - ZONA NORTE</p>
+        </div>
+
     </header>
     <main class="container">
         <div class="login-container">
             <form class="login-form" action="{{ url_for('login') }}" method="POST">
-            <h2 style="text-align: center; color: #191970; margin-bottom: 30px;">Login</h2>
+            <h2 style="text-align: center; color: #00640099; margin-bottom: 30px; font-family: Inknut Antiqua; font-size:40px;">Login</h2>
             <form id="loginForm">
                 <div class="form-group">
                     <label for="usuario">usuario</label>
                     <input type="usuario" id="usuario" name="usuario" required>
+                    <div class="error-message" id="emailError"></div>
                 </div>
                 <div class="form-group">
                     <label for="senha">Senha</label>
                     <input type="password" id="senha" name="senha" required>
+                    <div class="error-message" id="passwordError"></div>
                 </div>
-                <button type="submit" class="login-btn">Entrar</button>
+                <button type="submit" class="login-btn">acessar</button>
                 <div class="forgot-password">
                     <a href="recuperar-senha">Esqueceu sua senha?</a>
                 </div>
