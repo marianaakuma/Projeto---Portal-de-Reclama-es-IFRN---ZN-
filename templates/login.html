@@ -1,51 +1,26 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <title>Login</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
-</head>
-<body>
-    <header class="header">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo-container">
-               <img src="https://i.ibb.co/pvV7jz4K/2-removebg-preview.png"></a>
-                </div>
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <div class="card shadow">
+            <div class="card-body">
+                <h3 class="card-title text-center mb-4">Login</h3>
+                <form method="POST">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Usuário</label>
+                        <input type="text" name="username" id="username" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Senha</label>
+                        <input type="password" name="password" id="password" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Entrar</button>
+                </form>
             </div>
         </div>
-        <div class="logo-text">
-            <p>PROJETO DE PROJETO DE DESENVOLVIMENTO DE SISTEMAS PARA INTERNET</p>
-            <p>INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA - RIO GRANDE DO NORTE - CAMPUS NATAL - ZONA NORTE</p>
-        </div>
-        <div class="decoracao1">
-        <img src="https://i.ibb.co/TDQqHXgm/4-removebg-preview.png"></a>
-        </div>
-        <div class="decoracao2">
-        <img src="https://i.ibb.co/v5swPnc/7-removebg-preview.png"></a>
-        </div>
-
-    </header>
-    <main class="container">
-        <div class="login-container">
-            <form class="login-form" action="{{ url_for('login') }}" method="POST">
-            <h2 style="text-align: center; color: #00640099; margin-bottom: 30px; font-family: Inknut Antiqua; font-size:40px;">Login</h2>
-            <form id="loginForm">
-                <div class="form-group">
-                    <label for="usuario">usuario</label>
-                    <input type="usuario" id="usuario" name="usuario" required>
-                    <div class="error-message" id="emailError"></div>
-                </div>
-                <div class="form-group">
-                    <label for="senha">Senha</label>
-                    <input type="password" id="senha" name="senha" required>
-                    <div class="error-message" id="passwordError"></div>
-                </div>
-                <button type="submit" class="login-btn">acessar</button>
-                <div class="forgot-password">
-                    <a href="recuperar-senha">Esqueceu sua senha?</a>
-                </div>
-            </form>
-        </div>
-    </main>
-</body>
-</html>
+    </div>
+</div>
+{% endblock %}
